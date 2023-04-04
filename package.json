@@ -1,6 +1,6 @@
 {
   "name": "server-volunter",
-  "packageManager": "yarn@3.5.0",
+  "engines": {"node": "*"},
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
