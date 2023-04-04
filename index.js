@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // mongodb
-const { MongoClient, ServerApiVersion } = require('mongodb');
+
 const uri = `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@cluster0.js8fvq9.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 })
 
@@ -98,7 +98,7 @@ async function run() {
 
     }
     finally {
-        await client.close();
+        // await client.close();
     }
 }
 run().catch(console.dir)
